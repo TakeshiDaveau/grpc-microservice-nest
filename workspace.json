@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "projects": {
+    "grpc-microservice-nest": "apps/grpc-microservice-nest"
+  }
+}

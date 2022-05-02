@@ -1,0 +1,52 @@
+{
+  "root": "apps/grpc-microservice-nest",
+  "sourceRoot": "apps/grpc-microservice-nest/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/grpc-microservice-nest",
+        "main": "apps/grpc-microservice-nest/src/main.ts",
+        "tsConfig": "apps/grpc-microservice-nest/tsconfig.app.json",
+        "assets": ["apps/grpc-microservice-nest/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/grpc-microservice-nest/src/environments/environment.ts",
+              "with": "apps/grpc-microservice-nest/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "grpc-microservice-nest:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/grpc-microservice-nest/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/grpc-microservice-nest"],
+      "options": {
+        "jestConfig": "apps/grpc-microservice-nest/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
