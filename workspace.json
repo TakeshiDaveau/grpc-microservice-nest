@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
-    "grpc-microservice-nest": "apps/grpc-microservice-nest"
+    "grpc-gateway": "apps/gateway",
+    "grpc-order-microservice": "apps/order",
+    "grpc-product-microservice": "apps/product"
   }
 }
