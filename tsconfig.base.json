@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "assets": ["./apps/proto/src/*.proto"],
+    "watchAssets": true,
+    "paths": {
+      "@proto": ["./apps/proto/src/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

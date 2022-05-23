@@ -1,0 +1,12 @@
+{
+  "name": "grpc-microservice-nest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:TakeshiDaveau/grpx-microservice-nest.git",
+  "author": "TakeshiDaveau <takeshi.daveau@prestashop.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "ts-proto": "^1.112.2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "proto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-proto": "^1.112.2"
+  }
+}
