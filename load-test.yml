@@ -1,0 +1,11 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 300
+      arrivalRate: 10
+      maxVusers: 50
+
+scenarios:
+  - flow:
+      - post:
+          url: '/order'

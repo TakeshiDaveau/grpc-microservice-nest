@@ -7,6 +7,6 @@ export class OrderService {
   async createOrder(
     createOrder: CreateOrderDto,
   ): Promise<ICreateOrderResponse> {
-    return null;
+    return { status: 12, id: 1234567, error: [] };
   }
 }
